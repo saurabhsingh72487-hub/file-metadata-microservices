@@ -5,14 +5,14 @@ const path = require("path");
 
 const app = express();
 
-const upload = multer({ storage: multer.memoryStorage() });
-
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
+const upload = multer({ dest: "uploads/" });
+
 app.post("/api/fileanalyse", upload.single("upfile"), (req, res) => {
   if (!req.file) {
-    return res.status(400).json({ error: "No file uploaded" });
+    return res.json({ error: "No file uploaded" });
   }
 
   res.json({
