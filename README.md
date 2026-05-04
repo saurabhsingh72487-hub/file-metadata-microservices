@@ -9,7 +9,6 @@ Built as part of the freeCodeCamp Back End Development and APIs certification.
 
 (https://boilerplate-project-filemetadata-uczp.onrender.com/)
 
-
 ## 🚀 Features
 
 - Upload any file through a simple form
